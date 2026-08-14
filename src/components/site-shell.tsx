@@ -29,7 +29,7 @@ import {
 } from "lucide-react";
 
 const services = [
-  { icon: BrainCircuit, logo: "/sap-logo.svg", title: "SAP", desc: "Enterprise SAP integration and process automation for resilient operations." },
+  { icon: BrainCircuit, logo: "/favicon.png", title: "SAP", desc: "Enterprise SAP integration and process automation for resilient operations." },
   { icon: Code2, title: "Custom Software Development", desc: "Purpose-built platforms designed for scale and speed." },
   { icon: PanelTop, title: "Web Development", desc: "Immersive, conversion-first experiences for ambitious brands." },
   { icon: MonitorSmartphone, title: "Mobile Apps", desc: "Cross-platform products engineered around product-market fit." },
@@ -94,7 +94,7 @@ export function SiteShell() {
           </a>
           <nav className="hidden items-center gap-6 text-sm text-slate-600 lg:flex">
             {[["Home", "#home"], ["Services", "#services"], ["Solutions", "#solutions"], ["Industries", "#industries"], ["About", "#about"], ["Contact", "#contact"]].map(([label, href]) => (
-              <a key={label} href={href} className="transition hover:text-white">
+              <a key={label} href={href} className="transition hover:text-black">
                 {label}
               </a>
             ))}
@@ -168,12 +168,12 @@ export function SiteShell() {
           </div>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {services.map((service) => {
-              const Icon = service.icon;
-              return (
-                <article key={service.title} className="rounded-3xl border border-emerald-100 bg-white/80 p-7 shadow-xl shadow-emerald-950/5 backdrop-blur-xl transition hover:-translate-y-1">
-                  <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-100 to-lime-100 text-emerald-700">
-                    {service.logo ? (
-                      <Image src={service.logo} alt={`${service.title} logo`} width={40} height={40} className="h-10 w-10 object-contain" />
+                const Icon = service.icon;
+                return (
+                  <article key={service.title} className="rounded-3xl border border-emerald-100 bg-white/80 p-7 shadow-xl shadow-emerald-950/5 backdrop-blur-xl transition hover:-translate-y-1">
+                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-100 to-lime-100 text-emerald-700">
+                      {service.logo ? (
+                        <Image src={service.logo} alt={`${service.title} logo`} width={40} height={40} className="h-10 w-10 object-contain" />
                     ) : (
                       <Icon size={22} />
                     )}
@@ -345,17 +345,17 @@ export function SiteShell() {
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-200">Quick Links</h3>
             <ul className="mt-4 space-y-3 text-sm text-slate-400">
-              <li><a href="#services" className="hover:text-white">Services</a></li>
-              <li><a href="#industries" className="hover:text-white">Industries</a></li>
-              <li><a href="#about" className="hover:text-white">About</a></li>
+              <li><a href="#services" className="hover:text-black">Services</a></li>
+              <li><a href="#industries" className="hover:text-black">Industries</a></li>
+              <li><a href="#about" className="hover:text-black">About</a></li>
             </ul>
           </div>
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-200">Social</h3>
             <ul className="mt-4 space-y-3 text-sm text-slate-400">
-              <li><a href="https://www.linkedin.com" className="hover:text-white">LinkedIn</a></li>
-              <li><a href="https://www.x.com" className="hover:text-white">X</a></li>
-              <li><a href="https://www.instagram.com" className="hover:text-white">Instagram</a></li>
+              <li><a href="https://www.linkedin.com" className="hover:text-black">LinkedIn</a></li>
+              <li><a href="https://www.x.com" className="hover:text-black">X</a></li>
+              <li><a href="https://www.instagram.com" className="hover:text-black">Instagram</a></li>
             </ul>
           </div>
         </div>
